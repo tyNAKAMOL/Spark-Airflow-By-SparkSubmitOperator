@@ -1,0 +1,5 @@
+pyspark==3.1.2
+pandas==1.4.4
+psycopg2-binary==2.9.6
+apache-airflow-providers-apache-spark==2.0.1
+python-dotenv==1.0.0

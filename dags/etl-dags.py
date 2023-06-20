@@ -27,7 +27,7 @@ dag = DAG(
 start = DummyOperator(task_id="start", dag=dag)
 
 task1 = SparkSubmitOperator(
-    task_id="extract",
+    task_id="Extract",
     application="/opt/airflow/dags/extract-spark.py", 
     conf={"spark.master":spark_master},
     jars=postgres_driver_jar,
@@ -38,7 +38,7 @@ task1 = SparkSubmitOperator(
 )
 
 task2 = SparkSubmitOperator(
-    task_id="transform",
+    task_id="Transform",
     application="/opt/airflow/dags/transform-spark.py", 
     conf={"spark.master":spark_master},
     jars=postgres_driver_jar,
